@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
@@ -19,20 +20,14 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+          cache: gradle
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
-      # خیلی مهم: هیچ repository اینجا تعریف نمی‌کنیم
       - name: Clean project
         run: ./gradlew clean --no-daemon
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug --no-daemon
-
-      - name: Upload Debug APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: debug-apk
-          path: app/build/outputs/apk/debug/*.apk
 
