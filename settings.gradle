@@ -1,8 +1,19 @@
 pluginManagement {
     repositories {
-        google()            // ⬅️ حیاتی برای Android Gradle Plugin
+        google()
         mavenCentral()
         gradlePluginPortal()
     }
 }
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "Traffic-monitoring"
+include(":app")
 
