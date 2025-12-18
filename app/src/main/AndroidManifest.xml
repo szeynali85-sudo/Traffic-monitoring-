@@ -1,12 +1,12 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.trafficmonitoring">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
         android:label="Traffic Monitoring"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TrafficMonitoring">
-        
+        android:theme="@style/Theme.AppCompat">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
