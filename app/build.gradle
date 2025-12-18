@@ -1,4 +1,14 @@
 android {
     namespace "com.example.trafficmonitoring"
+
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.trafficmonitoring"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
 }
 
